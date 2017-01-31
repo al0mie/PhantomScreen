@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',  ['as' => 'admin.urlshot.index', 'uses' => 'ScreenshotController@index']); 
+Route::post('/process', ['as' => 'admin.urlshot.process', 'uses' => 'ScreenshotController@process']); 
+Route::get('/allWidgets', ['as' => 'admin.urlshot.allWidgets', 'uses' => 'ScreenshotController@allWidgets']); 
